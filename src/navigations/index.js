@@ -27,6 +27,20 @@ import ReviewDetails from '../screens/Account/ReviewDetails';
 import SellerProfile from '../screens/Account/SellerProfile';
 import BuyerProfile from '../screens/Account/BuyperProfile';
 import Setting from '../screens/Account/Setting';
+import LiveStream from '../screens/Account/LiveStream';
+import ManageMyStore from '../screens/Account/ManageMyStore';
+import LeaveAReview from '../screens/Account/LeaveAReview';
+import AddProduct from '../screens/Account/AddProduct';
+import ModifyProduct from '../screens/Account/ModifyProduct';
+import SalesSummary from '../screens/Account/SalesSummary';
+import SalesSummary2 from '../screens/Account/SalesSummary2';
+import PurchaseSummary from '../screens/Account/PurchaseSummary';
+import PurchaseSummary2 from '../screens/Account/PurchaseSummary2';
+import ForgetPasword from '../screens/Account/ForgetPasword';
+import OTPScreen from '../screens/Account/OTPScreen';
+import SearchFilters from '../screens/Account/SearchFilters';
+import Posts from '../screens/Account/Posts';
+import Subscription from '../screens/Account/Subscription';
 const Stack = createNativeStackNavigator();
 
 export default class index extends Component {
@@ -38,12 +52,28 @@ export default class index extends Component {
 
   render() {
     return (
-        <Stack.Navigator initialRouteName='Setting'
+        <Stack.Navigator initialRouteName='Account'
           screenOptions={{headerShown: false,animation:"fade_from_bottom"}}>
          <Stack.Screen name="Setting" component={Setting} />
 
          {/* Worked Screens */}
 
+         <Stack.Screen name="Subscription" component={Subscription} />
+         <Stack.Screen name="Posts" component={Posts} />
+         <Stack.Screen name="OTPScreen" component={OTPScreen} />
+         <Stack.Screen name="ForgetPasword" component={ForgetPasword} />
+         <Stack.Screen name="PurchaseSummary2" component={PurchaseSummary2} />
+         <Stack.Screen name="PurchaseSummary" component={PurchaseSummary} />
+         <Stack.Screen name="SalesSummary2" component={SalesSummary2} />
+         <Stack.Screen name="SalesSummary" component={SalesSummary} />
+         <Stack.Screen name="ModifyProduct" component={ModifyProduct} />
+         <Stack.Screen name="AddProduct" component={AddProduct} />
+         <Stack.Screen name="LeaveAReview" component={LeaveAReview} />
+
+         <Stack.Screen name="LiveStream" component={LiveStream} />
+
+
+         <Stack.Screen name="ManageMyStore" component={ManageMyStore} />
          <Stack.Screen name="Notification" component={Notification} />
          <Stack.Screen name="Home" component={Home} />
          <Stack.Screen name="Account" component={Account} />

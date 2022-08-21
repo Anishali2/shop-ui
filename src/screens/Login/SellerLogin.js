@@ -1,17 +1,13 @@
 
 
-import React,{useState,useEffect} from "react";
-import { Text,View, TouchableOpacity,FlatList ,Image,Pressable,TextInput,ScrollView} from 'react-native';
+import React,{useState} from "react";
+import { Text,View,TextInput} from 'react-native';
 import StyleSheet from '../../assets/css/style'
-import { colors, fonts } from "../../constraints";
-import { CheckBox } from '../../components/General'
-import { Mail,Plus }  from 'svg'
-import { MainButton } from "../../components/MainComponents/MainButton"
+import { colors } from "../../constraints";
+import { Mail }  from 'svg'
 import MyContainer from "../../components/MainComponents/MyContainer";
-import {MiniMainButton} from "../../components/MainComponents/MiniMainButton"
-import { Eye, Facebook, Google, LoginCart, Password } from "../../assets/svg";
+import { Eye, Facebook, LoginCart, Password } from "../../assets/svg";
 import { LoginButton } from "../../components/MainComponents/LoginButton";
-import LinearGradient from 'react-native-linear-gradient';
 import { Button } from "react-native-paper";
 const SellerLogin = (props) =>{
     

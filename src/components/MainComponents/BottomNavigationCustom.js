@@ -9,10 +9,12 @@ import {
     UserIcon,
     UserActive,
     FavouriteIcon,
-    FavouriteActive } 
+    FavouriteActive,
+MessageIcon,MessageActive } 
     from 'svg';
 import { useNavigation } from '@react-navigation/native';
 import StyleSheet from "../../assets/css/style";
+import Icon from 'react-native-vector-icons/AntDesign';
  const BottomNavigationCustom = ({...props}) => {
 
      const navigation = useNavigation();
@@ -49,11 +51,12 @@ import StyleSheet from "../../assets/css/style";
                                 }
                         </Pressable> 
                         <Pressable
-                            onPress={() => navigation.navigate("Account")}
+                            onPress={() => navigation.navigate("LiveStream")}
                             style={StyleSheet.bottomNavigation}>
                             {props.activeTab3 ?
                             <>
                                 <CartActive/>
+                                <Text style={{color:"red"}}>Go Live</Text>
                             </>:<>
                                 <CartIcon/>
                             </>
@@ -64,9 +67,9 @@ import StyleSheet from "../../assets/css/style";
                             style={StyleSheet.bottomNavigation}>
                             {props.activeTab4 ?
                             <>
-                                <CartActive/>
+                                <MessageActive/>
                             </>:<>
-                                <CartIcon/>
+                                <MessageIcon/>
                             </>
                                 }
                         </Pressable> 
